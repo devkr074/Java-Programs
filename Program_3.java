@@ -1,16 +1,14 @@
-// Sum of Two Numbers in Java
+// User Input using BufferedReader Class in Java
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Program_3 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the first number: ");
-    int num1 = sc.nextInt();
-    System.out.print("Enter the second number: ");
-    int num2 = sc.nextInt();
-    int sum = num1 + num2;
-    System.out.println("The sum is: " + sum);
-    sc.close();
-  }
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter Your Name: ");
+        String name = reader.readLine();
+        System.out.println("Hello " + name + "!");
+    }
 }
