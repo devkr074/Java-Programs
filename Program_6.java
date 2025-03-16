@@ -1,13 +1,18 @@
-// Swap Two Numbers in Java
+// Strings and Methods in Java
 
 public class Program_6 {
     public static void main(String[] args) {
-        int a = 5;
-        int b = 10;
-        System.out.println("Before Swap: A=" + a + ",B=" + b);
-        a = a + b;
-        b = a - b;
-        a = a - b;
-        System.out.println("After Swap: A=" + a + ",B=" + b);
+        String str = new String("Hello World");
+        String str2 = new String("Hello Java");
+        System.out.println(str.length());
+        System.out.println(str.charAt(1));
+        System.out.println(str.substring(7, 11));
+        System.out.println(str.toLowerCase());
+        System.out.println(str.toUpperCase());
+        System.out.println(str.contains("World"));
+        System.out.println(str.replace('l', 'p'));
+        System.out.println(str.equals(str2));
+        System.out.println(str.equalsIgnoreCase(str2));
+        System.out.println(str.trim());
     }
 }
