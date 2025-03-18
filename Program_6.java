@@ -1,18 +1,24 @@
-// Strings and Methods in Java
+// Shopping Cart in Java
+
+import java.util.Scanner;
 
 public class Program_6 {
     public static void main(String[] args) {
-        String str = new String("Hello World");
-        String str2 = new String("Hello Java");
-        System.out.println(str.length());
-        System.out.println(str.charAt(1));
-        System.out.println(str.substring(7, 11));
-        System.out.println(str.toLowerCase());
-        System.out.println(str.toUpperCase());
-        System.out.println(str.contains("World"));
-        System.out.println(str.replace('l', 'p'));
-        System.out.println(str.equals(str2));
-        System.out.println(str.equalsIgnoreCase(str2));
-        System.out.println(str.trim());
+        Scanner scanner = new Scanner(System.in);
+        String item;
+        double price;
+        int quantity;
+        char currency = '$';
+        double total;
+        System.out.print("What item would you like to buy?: ");
+        item = scanner.nextLine();
+        System.out.print("What is the price for each?: ");
+        price = scanner.nextDouble();
+        System.out.print("How many would you like?: ");
+        quantity = scanner.nextInt();
+        total = price * quantity;
+        System.out.println("\nYou have bought " + quantity + " " + item + "/s");
+        System.out.println("Your total is " + currency + total);
+        scanner.close();
     }
 }
