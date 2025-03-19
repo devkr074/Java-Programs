@@ -1,18 +1,19 @@
-// Simple Interest Calculator in Java
+// Random Number in Java
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Program_8 {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter principal amount: ");
-    double principal = sc.nextDouble();
-    System.out.print("Enter rate of interest: ");
-    double rate = sc.nextDouble();
-    System.out.print("Enter time period in years: ");
-    int time = sc.nextInt();
-    double simpleInterest = (principal * rate * time) / 100;
-    System.out.println("Simple Interest: " + simpleInterest);
-    sc.close();
+    Random random = new Random();
+    int number;
+    boolean isHeads;
+    number = random.nextInt(1, 7);
+    isHeads = random.nextBoolean();
+    System.out.println(number);
+    if (isHeads) {
+      System.out.println("HEADS");
+    } else {
+      System.out.println("TAILS");
+    }
   }
 }
