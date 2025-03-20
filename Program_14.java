@@ -1,20 +1,22 @@
-// Bitwise Operations in Java
+// substring in Java
 
 import java.util.Scanner;
-
 public class Program_14 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the first number: ");
-    int num1 = sc.nextInt();
-    System.out.print("Enter the second number: ");
-    int num2 = sc.nextInt();
-    System.out.println("First Number & Second Number: " + (num1 & num2));
-    System.out.println("First Number | Second Number: " + (num1 | num2));
-    System.out.println("First Number ^ Second Number: " + (num1 ^ num2));
-    System.out.println("~First Number: " + (~num1));
-    System.out.println("First Number << 2: " + (num1 << 2));
-    System.out.println("First Number >> 2: " + (num1 >> 2));
-    sc.close();
-  }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String email;
+        String username;
+        String domain;
+        System.out.print("Enter your email: ");
+        email = scanner.nextLine();
+        if (email.contains("@")) {
+            username = email.substring(0, email.indexOf("@"));
+            domain = email.substring(email.indexOf("@") + 1);
+            System.out.println(username);
+            System.out.println(domain);
+        } else {
+            System.out.println("Emails must contain @");
+        }
+        scanner.close();
+    }
 }
