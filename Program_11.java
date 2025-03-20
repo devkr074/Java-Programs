@@ -1,19 +1,25 @@
-// Arithmetic Operations in Java
+// Compound Interest Calculator in Java
 
 import java.util.Scanner;
 
 public class Program_11 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the first number: ");
-    int num1 = sc.nextInt();
-    System.out.print("Enter the second number: ");
-    int num2 = sc.nextInt();
-    System.out.println("Addition: " + (num1 + num2));
-    System.out.println("Subtraction: " + (num1 - num2));
-    System.out.println("Multiplication: " + (num1 * num2));
-    System.out.println("Division: " + (num1 / num2));
-    System.out.println("Modulus: " + (num1 % num2));
-    sc.close();
-  }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double principal;
+        double rate;
+        int timesCompounded;
+        int years;
+        double amount;
+        System.out.print("Enter the principal amount: ");
+        principal = scanner.nextDouble();
+        System.out.print("Enter the interest rate (in %): ");
+        rate = scanner.nextDouble() / 100;
+        System.out.print("Enter the # of times compounded per year: ");
+        timesCompounded = scanner.nextInt();
+        System.out.print("Enter the # of years: ");
+        years = scanner.nextInt();
+        amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
+        System.out.printf("The amount after %d years is $%.2f", years, amount);
+        scanner.close();
+    }
 }
