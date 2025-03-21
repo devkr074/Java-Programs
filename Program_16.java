@@ -1,15 +1,9 @@
-// Print Numbers from 1 to N in Java
-
-import java.util.Scanner;
+// Ternary Operator in Java
 
 public class Program_16 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter a positive integer: ");
-    int N = sc.nextInt();
-    for (int i = 1; i <= N; i++) {
-      System.out.println(i);
+    public static void main(String[] args) {
+        int number = 10;
+        String evenOrOdd = (number % 2 == 0) ? "EVEN" : "ODD";
+        System.out.println(evenOrOdd);
     }
-    sc.close();
-  }
 }
