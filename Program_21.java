@@ -1,15 +1,22 @@
-// Multiplication Table in Java
+// while loop in Java
 
 import java.util.Scanner;
 
 public class Program_21 {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter a positive integer: ");
-    int num = sc.nextInt();
-    for (int i = 1; i <= 10; i++) {
-      System.out.println(num + " x " + i + " = " + num * i);
+    Scanner scanner = new Scanner(System.in);
+    String name = "";
+    while (name.isEmpty()) {
+      System.out.print("Enter your name: ");
+      name = scanner.nextLine();
     }
-    sc.close();
+    System.out.println("Hello " + name);
+    String response = "";
+    while (!response.equals("Q")) {
+      System.out.print("Press Q to quit: ");
+      response = scanner.next().toUpperCase();
+    }
+    System.out.println("You have quit");
+    scanner.close();
   }
 }
