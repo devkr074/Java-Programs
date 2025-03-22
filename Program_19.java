@@ -1,6 +1,7 @@
 // Simple Calculator in Java
 
 import java.util.Scanner;
+
 public class Program_19 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -15,16 +16,15 @@ public class Program_19 {
         operator = scanner.next().charAt(0);
         System.out.print("Enter the second number: ");
         num2 = scanner.nextDouble();
-        switch(operator){
+        switch (operator) {
             case '+' -> result = num1 + num2;
             case '-' -> result = num1 - num2;
             case '*' -> result = num1 * num2;
             case '/' -> {
-                if(num2 == 0){
+                if (num2 == 0) {
                     System.out.println("Cannot divide by zero!");
                     validOperation = false;
-                }
-                else{
+                } else {
                     result = num1 / num2;
                 }
             }
@@ -34,7 +34,7 @@ public class Program_19 {
                 validOperation = false;
             }
         }
-        if(validOperation){
+        if (validOperation) {
             System.out.println(result);
         }
         scanner.close();
