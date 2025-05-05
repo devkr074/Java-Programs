@@ -1,21 +1,34 @@
-// Grade Calculator in Java
-
-import java.util.Scanner;
+// Method in Java
 
 public class Program_26 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your marks: ");
-        int marks = sc.nextInt();
-        if (marks >= 90) {
-            System.out.println("Grade: A");
-        } else if (marks >= 75) {
-            System.out.println("Grade: B");
-        } else if (marks >= 50) {
-            System.out.println("Grade: C");
+        happyBirthday("Spongebob", 30);
+    }
+
+    static void happyBirthday(String name, int age) {
+        System.out.println("Happy Birthday to you!");
+        System.out.printf("Happy Birthday dear %s!\n", name);
+        System.out.printf("You are %d years old!\n", age);
+        System.out.println("Happy Birthday to you!\n");
+    }
+
+    static double square(double number) {
+        return number * number;
+    }
+
+    static double cube(double number) {
+        return number * number * number;
+    }
+
+    static String getFullName(String first, String last) {
+        return first + " " + last;
+    }
+
+    static boolean ageCheck(int age) {
+        if (age >= 18) {
+            return true;
         } else {
-            System.out.println("Grade: F");
+            return false;
         }
-        sc.close();
     }
 }
