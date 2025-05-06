@@ -1,6 +1,6 @@
 // Scope of Variable in Java
 
-public class Main {
+public class Program_28 {
     static int x = 3;
 
     public static void main(String[] args) {
