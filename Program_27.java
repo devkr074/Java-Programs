@@ -1,23 +1,20 @@
-// Class in Java (Person Class)
+// Overloaded Method in Java
 
 public class Program_27 {
-  public static void main(String[] args) {
-    Person person = new Person("Alice", 30);
-    person.displayInfo();
-  }
-}
+    public static void main(String[] args) {
+        String pizza = bakePizza("flat-bread", "mozzarella", "pepperoni");
+        System.out.println(pizza);
+    }
 
-class Person {
-  String name;
-  int age;
+    static String bakePizza(String bread) {
+        return bread + " pizza";
+    }
 
-  public Person(String name, int age) {
-    this.name = name;
-    this.age = age;
-  }
+    static String bakePizza(String bread, String cheese) {
+        return cheese + " " + bread + " pizza";
+    }
 
-  void displayInfo() {
-    System.out.println("Name: " + name);
-    System.out.println("Age: " + age);
-  }
+    static String bakePizza(String bread, String cheese, String topping) {
+        return topping + " " + cheese + " " + bread + " pizza";
+    }
 }
