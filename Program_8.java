@@ -1,19 +1,13 @@
-// Random Number in Java
+// Character Input
 
-import java.util.Random;
+import java.util.Scanner;
 
 public class Program_8 {
   public static void main(String[] args) {
-    Random random = new Random();
-    int number;
-    boolean isHeads;
-    number = random.nextInt(1, 7);
-    isHeads = random.nextBoolean();
-    System.out.println(number);
-    if (isHeads) {
-      System.out.println("HEADS");
-    } else {
-      System.out.println("TAILS");
-    }
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a character: ");
+    char character = sc.next().charAt(0);
+    System.out.println("You entered: " + character);
+    sc.close();
   }
 }
