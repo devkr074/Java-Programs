@@ -1,18 +1,24 @@
-// Math Class in Java
+// Sum, Difference, Product, Quotient, and Remainder
+
+import java.util.Scanner;
 
 public class Program_9 {
   public static void main(String[] args) {
-    System.out.println(Math.PI);
-    System.out.println(Math.E);
-    double result;
-    result = Math.pow(3, 4);
-    result = Math.abs(-5);
-    result = Math.sqrt(16);
-    result = Math.round(3.14);
-    result = Math.ceil(3.14);
-    result = Math.floor(3.14);
-    result = Math.max(10, 20);
-    result = Math.min(10, 20);
-    System.out.println(result);
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter first number: ");
+    int num1 = scanner.nextInt();
+    System.out.print("Enter second number: ");
+    int num2 = scanner.nextInt();
+    int sum = num1 + num2;
+    int difference = num1 - num2;
+    int product = num1 * num2;
+    int quotient = num1 / num2;
+    int remainder = num1 % num2;
+    System.out.println("Sum: " + sum);
+    System.out.println("Difference: " + difference);
+    System.out.println("Product: " + product);
+    System.out.println("Quotient: " + quotient);
+    System.out.println("Remainder: " + remainder);
+    scanner.close();
   }
 }
