@@ -1,34 +1,19 @@
-// String Methods in Java
+// Difference between ++a and a++
+
+import java.util.Scanner;
 
 public class Program_13 {
     public static void main(String[] args) {
-        String name = "Bro Code";
-        int length = name.length();
-        System.out.println(length);
-        char letter = name.charAt(0);
-        System.out.println(letter);
-        int index = name.indexOf(" ");
-        System.out.println(index);
-        int lastIndex = name.lastIndexOf("o");
-        System.out.println(lastIndex);
-        name = name.toUpperCase();
-        name = name.toLowerCase();
-        name = name.trim();
-        name = name.replace("o", "a");
-        if (name.isEmpty()) {
-            System.out.println("Your name is empty");
-        } else {
-            System.out.println("Hello " + name);
-        }
-        if (name.contains(" ")) {
-            System.out.println("Your name contains a space");
-        } else {
-            System.out.println("Your name DOESN'T contain any spaces");
-        }
-        if (name.equalsIgnoreCase("password")) {
-            System.out.println("Your name can't be password");
-        } else {
-            System.out.println("Hello " + name);
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int a = scanner.nextInt();
+        int preIncrement = ++a;
+        System.out.println("After pre-increment (++a): " + preIncrement);
+        System.out.println("Value of a after pre-increment: " + a);
+        a = a - 1;
+        int postIncrement = a++;
+        System.out.println("After post-increment (a++): " + postIncrement);
+        System.out.println("Value of a after post-increment: " + a);
+        scanner.close();
     }
 }
