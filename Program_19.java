@@ -1,41 +1,27 @@
-// Simple Calculator in Java
+// Character is vowel or consonant
 
 import java.util.Scanner;
 
 public class Program_19 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double num1;
-        double num2;
-        char operator;
-        double result = 0;
-        boolean validOperation = true;
-        System.out.print("Enter the first number: ");
-        num1 = scanner.nextDouble();
-        System.out.print("Enter an operator (+, -, *, /, ^): ");
-        operator = scanner.next().charAt(0);
-        System.out.print("Enter the second number: ");
-        num2 = scanner.nextDouble();
-        switch (operator) {
-            case '+' -> result = num1 + num2;
-            case '-' -> result = num1 - num2;
-            case '*' -> result = num1 * num2;
-            case '/' -> {
-                if (num2 == 0) {
-                    System.out.println("Cannot divide by zero!");
-                    validOperation = false;
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().toLowerCase().charAt(0);
+        switch (ch) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                System.out.println(ch + " is a vowel.");
+                break;
+            default:
+                if (Character.isLetter(ch)) {
+                    System.out.println(ch + " is a consonant.");
                 } else {
-                    result = num1 / num2;
+                    System.out.println("Error: Invalid input. Please enter an alphabetic character.");
                 }
-            }
-            case '^' -> result = Math.pow(num1, num2);
-            default -> {
-                System.out.println("Invalid operator!");
-                validOperation = false;
-            }
-        }
-        if (validOperation) {
-            System.out.println(result);
+                break;
         }
         scanner.close();
     }
