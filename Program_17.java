@@ -1,19 +1,42 @@
-// Temperature Convertor in Java
+// Simple calculator
 
 import java.util.Scanner;
 
 public class Program_17 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double temp;
-        double newTemp;
-        String unit;
-        System.out.print("Enter the temperature: ");
-        temp = scanner.nextDouble();
-        System.out.print("Convert to Celsius or Fahrenheit? (C or F): ");
-        unit = scanner.next().toUpperCase();
-        newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 5 / 9) + 32;
-        System.out.printf("%.1f°%s", newTemp, unit);
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+        System.out.print("Enter an operator (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+        double result;
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                System.out.println("The result is: " + result);
+                break;
+            case '-':
+                result = num1 - num2;
+                System.out.println("The result is: " + result);
+                break;
+            case '*':
+                result = num1 * num2;
+                System.out.println("The result is: " + result);
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    System.out.println("The result is: " + result);
+                } else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                }
+                break;
+            default:
+                System.out.println("Error: Invalid operator.");
+                break;
+        }
         scanner.close();
     }
 }
