@@ -1,17 +1,12 @@
-// for loop in Java
+// Even numbers between 1 to 20
 
-import java.util.Scanner;
-
-public class Program_23 {
-    public static void main(String[] args) throws InterruptedException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("How many seconds to countdown from?: ");
-        int start = scanner.nextInt();
-        for (int i = start; i > 0; i--) {
+class Program_23 {
+    public static void main(String args[]) {
+        for (int i = 1; i <= 20; i++) {
+            if (i % 2 != 0) {
+                continue;
+            }
             System.out.println(i);
-            Thread.sleep(1000);
         }
-        System.out.println("HAPPY NEW YEAR!");
-        scanner.close();
     }
 }
