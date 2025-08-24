@@ -1,12 +1,14 @@
-// break and continue in Java
+// Stop loop when number is 7
 
 public class Program_24 {
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            if (i == 4) {
+        int number = 1;
+        while (number <= 10) {
+            if (number == 7) {
                 break;
             }
-            System.out.print(i + " ");
+            System.out.println(number);
+            number++;
         }
     }
 }
