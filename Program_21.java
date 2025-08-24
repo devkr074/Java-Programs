@@ -1,22 +1,10 @@
-// while loop in Java
+// Multiplication table of 5
 
-import java.util.Scanner;
-
-public class Program_21 {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    String name = "";
-    while (name.isEmpty()) {
-      System.out.print("Enter your name: ");
-      name = scanner.nextLine();
+class Program_21 {
+  public static void main(String args[]) {
+    int num = 5;
+    for (int i = 1; i <= 10; i++) {
+      System.out.println(num + " x " + i + " = " + (num * i));
     }
-    System.out.println("Hello " + name);
-    String response = "";
-    while (!response.equals("Q")) {
-      System.out.print("Press Q to quit: ");
-      response = scanner.next().toUpperCase();
-    }
-    System.out.println("You have quit");
-    scanner.close();
   }
 }
