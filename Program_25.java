@@ -1,24 +1,18 @@
-// Nested Loop in Java
+// Printing Elments of an Array
 
 import java.util.Scanner;
 
 public class Program_25 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int rows;
-        int columns;
-        char symbol;
-        System.out.print("Enter the # of rows: ");
-        rows = scanner.nextInt();
-        System.out.print("Enter the # of columns: ");
-        columns = scanner.nextInt();
-        System.out.print("Enter the symbol to use: ");
-        symbol = scanner.next().charAt(0);
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                System.out.print(symbol);
-            }
-            System.out.println();
+        int[] numbers = new int[5];
+        System.out.println("Enter 5 integers:");
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        System.out.println("The entered integers are:");
+        for (int num : numbers) {
+            System.out.println(num);
         }
         scanner.close();
     }
