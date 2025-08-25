@@ -1,16 +1,19 @@
-// Scope of Variable in Java
+// Reverse an Array
+
+import java.util.Scanner;
 
 public class Program_28 {
-    static int x = 3;
-
     public static void main(String[] args) {
-        int x = 1;
-        System.out.println(x);
-        doSomething();
-    }
-
-    static void doSomething() {
-        int x = 2;
-        System.out.println(x);
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = new int[5];
+        System.out.println("Enter 5 integers:");
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        System.out.println("The reversed array is:");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.println(numbers[i]);
+        }
+        scanner.close();
     }
 }
