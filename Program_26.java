@@ -1,34 +1,20 @@
-// Method in Java
+// Sum of elements of an Array
+
+import java.util.Scanner;
 
 public class Program_26 {
     public static void main(String[] args) {
-        happyBirthday("Spongebob", 30);
-    }
-
-    static void happyBirthday(String name, int age) {
-        System.out.println("Happy Birthday to you!");
-        System.out.printf("Happy Birthday dear %s!\n", name);
-        System.out.printf("You are %d years old!\n", age);
-        System.out.println("Happy Birthday to you!\n");
-    }
-
-    static double square(double number) {
-        return number * number;
-    }
-
-    static double cube(double number) {
-        return number * number * number;
-    }
-
-    static String getFullName(String first, String last) {
-        return first + " " + last;
-    }
-
-    static boolean ageCheck(int age) {
-        if (age >= 18) {
-            return true;
-        } else {
-            return false;
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = new int[5];
+        System.out.println("Enter 5 integers:");
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = scanner.nextInt();
         }
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        System.out.println("The sum of the entered integers is: " + sum);
+        scanner.close();
     }
 }
