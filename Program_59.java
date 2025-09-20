@@ -1,4 +1,4 @@
-class Program_59 extends Vehicle {
+public class Program_59 extends Vehicle {
     private String modelName = "Mustang";
 
     public static void main(String[] args) {
