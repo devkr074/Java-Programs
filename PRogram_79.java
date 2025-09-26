@@ -1,6 +1,6 @@
 import java.io.File;
 
-public class PRogram_79 {
+public class Program_79 {
   public static void main(String[] args) {
     File myObj = new File("filename.txt");
     if (myObj.delete()) {
